@@ -25,5 +25,10 @@ Se faz necessário realizar os seguintes passos abaixo para que vocês possam da
 > npm install -g yo generator-office
 ```
 
+Desejam Propor Melhorias no Código? Façam Pull Request!!!  :triangular_flag_on_post:
 
-**documentação em desenvolvimento**
+Caso queiram que eu implemente algo no código, abram uma issue nesse repositório. Assim, todos poderão colaborar para o melhor desenvolvimento desse repositório. E sintam-se à vontade em fazer Pull Requests!!
+
+Não esqueçam de dar uma star no repositório e claro: Apreciem sem moderação!! :heart: :heart: :heart:
+
+**Documentação em Desenvolvimento**
