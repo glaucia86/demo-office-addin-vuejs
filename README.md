@@ -26,4 +26,4 @@ Se faz necessário realizar os seguintes passos abaixo para que vocês possam da
 ```
 
 
-**Documentação em desenvolvimento**
+**documentação em desenvolvimento**
