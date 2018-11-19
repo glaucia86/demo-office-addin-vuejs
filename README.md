@@ -17,7 +17,7 @@ Repositório responsável pelos códigos desenvolvidos durante a palestra no eve
 
 Se faz necessário realizar os seguintes passos abaixo para que vocês possam dar continuidade a demo:
 
-1) Possuir conta OneDrive - [Criar Conta Aqui](https://onedrive.live.com/)
+1) Possuir conta OneDrive - **[Criar Conta Aqui](https://onedrive.live.com/)**
 
 2) Instalar Office Yeoman Generator
 
