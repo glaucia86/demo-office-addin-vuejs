@@ -1,5 +1,5 @@
 /**
- * File: src/components/waiting.ts
+ * File: src/components/Waiting/waiting.ts
  * Description:
  * Date: 11/20/2018
  * Author: Glaucia Lemos
