@@ -53,6 +53,8 @@ Após isso, abre uma aplicação Excel (pode ser a versão online) e clique na o
 
 **melhorar essa parte da documentação**
 
+**[MAIS INFOS AQUI](https://docs.microsoft.com/en-us/office/dev/add-ins/testing/sideload-office-add-ins-for-testing#sideload-an-office-add-in-on-office-online)**
+
 E pronto. A sua aplicação estará sendo executada! :smile:
 
 ## Desejam Propor Melhorias no Código? Façam Pull Request!!!  :triangular_flag_on_post:
