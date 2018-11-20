@@ -25,6 +25,22 @@ Se faz necessário realizar os seguintes passos abaixo para que vocês possam da
 > npm install -g yo generator-office
 ```
 
+## Executando o Projeto Localmente: :boom:
+
+Para executar o projeto localmente na sua máquina, se faz necessário instalar as dependências do projeto, contidos no arquivo 'package.json'. Para isso, se faz necessário executar o comando abaixo:
+
+```
+> npm install
+```
+
+Após isso, basta ir até a pasta raiz do projeto e executar o comando abaixo:
+
+```
+> npm start
+```
+
+E pronto. A sua aplicação estará sendo executada! :smile:
+
 ## Desejam Propor Melhorias no Código? Façam Pull Request!!!  :triangular_flag_on_post:
 
 Caso queiram que eu implemente algo no código, abram uma **[Issue](https://github.com/glaucia86/demo-office-addin-vuejs/issues)** nesse repositório. Assim, todos poderão colaborar para o melhor desenvolvimento desse repositório. E sintam-se à vontade em fazer Pull Requests!!
