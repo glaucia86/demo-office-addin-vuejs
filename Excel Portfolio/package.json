@@ -33,14 +33,15 @@
   },
   "homepage": "https://github.com/glaucia86/demo-office-addin-vuejs/blob/master/README.md",
   "devDependencies": {
-    "office-toolbox": "^0.1.0",
-    "typescript": "^2.7.2",
     "@types/office-js": "^0.0.37",
-    "@types/jquery": "^2.0.39",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.0.7",
+    "office-toolbox": "^0.1.0",
     "ts-loader": "^4.1.0",
+    "typescript": "^2.7.2",
+    "vue-loader": "^15.4.2",
+    "vue-template-compiler": "^2.5.17",
     "webpack": "^4.1.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.1"
