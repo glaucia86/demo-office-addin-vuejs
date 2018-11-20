@@ -1,10 +1,11 @@
 {
   "name": "excel-portfolio",
-  "description": "",
-  "author": "",
+  "description": "Aplicação demo como desenvolver um pequeno add-in para o Excel Office 365",
+  "author": "Glaucia Lemos",
+  "license": "MIT",
   "version": "0.1.0",
   "scripts": {
-    "start": "webpack-dev-server --mode development --https --key ./certs/server.key --cert ./certs/server.crt --cacert ./certs/ca.crt --port 3000",
+    "start": "webpack-dev-server --open --mode development --https --key ./certs/server.key --cert ./certs/server.crt --cacert ./certs/ca.crt --port 3000",
     "sideload": "office-toolbox sideload -m manifest.xml -a Excel",
     "build": "webpack --mode production",
     "validate": "office-toolbox validate -m manifest.xml"
@@ -14,6 +15,23 @@
     "office-ui-fabric-js": "^1.3.0",
     "jquery": "^3.1.1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glaucia86/demo-office-addin-vuejs"
+  },
+  "keywords": [
+    "officejs",
+    "vuejs",
+    "nodejs",
+    "vscode",
+    "typescript",
+    "office-addin",
+    "addin"
+  ],
+  "bugs": {
+    "url": "https://github.com/glaucia86/demo-office-addin-vuejs/issues"
+  },
+  "homepage": "https://github.com/glaucia86/demo-office-addin-vuejs/blob/master/README.md",
   "devDependencies": {
     "office-toolbox": "^0.1.0",
     "typescript": "^2.7.2",
