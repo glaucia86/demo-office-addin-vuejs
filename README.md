@@ -25,6 +25,14 @@ Se faz necessário realizar os seguintes passos abaixo para que vocês possam da
 > npm install -g yo generator-office
 ```
 
+3) Instalar ou Adicionar os Certificados Autorizados na Raiz:
+
+O Office Add-ins requerem e devem ser protegidos por SSL. Assim que, se faz necessário que se utilize os certificados gerados e que estão contidos na aplicação.
+Para seguir o passo a passo para cada OS segue o link **[AQUI]**(https://github.com/OfficeDev/generator-office/blob/master/src/docs/ssl.md)
+
+Em caso de dúvidas em como adicionar esses certificados, fiquem à vontade de abrir uma ISSUE [AQUI](https://github.com/glaucia86/demo-office-addin-vuejs/issues) que estarei ajudando a todos vocês! :heart:
+
+
 ## Executando o Projeto Localmente: :boom:
 
 Para executar o projeto localmente na sua máquina, se faz necessário instalar as dependências do projeto, contidos no arquivo 'package.json'. Para isso, se faz necessário executar o comando abaixo:
