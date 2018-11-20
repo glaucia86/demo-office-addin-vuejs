@@ -1,4 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin'); //incluir essa lib
 
 module.exports = {
     devtool: 'source-map',
@@ -7,14 +8,29 @@ module.exports = {
         'function-file': './function-file/function-file.ts'
     },
     resolve: {
-        extensions: ['.ts', '.tsx', '.html', '.js']
+        extensions: ['.ts', '.tsx', '.html', '.js', '.vue'],
+        alias: {
+            vue$: 'vue/dist/vue.js'
+        }
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: 'ts-loader'
+                use: [{
+                    loader: 'ts-loader',
+                    options: {
+                        appendTsSuffixTo: [/\.vue$/],
+                        transpileOnly: true
+                    }
+                }]
+            },
+            {
+                test: /\.vue$/,
+                loader: 'vue-loader',
+                options: {
+                    esModule: true
+                }
             },
             {
                 test: /\.html$/,
@@ -36,6 +52,7 @@ module.exports = {
             template: './function-file/function-file.html',
             filename: 'function-file/function-file.html',
             chunks: ['function-file']
-        })
+        }),
+        new VueLoaderPlugin()
     ]
 };
