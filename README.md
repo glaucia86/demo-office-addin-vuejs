@@ -47,6 +47,12 @@ Após isso, basta ir até a pasta raiz do projeto e executar o comando abaixo:
 > npm start
 ```
 
+Após isso, abre uma aplicação Excel (pode ser a versão online) e clique na opção: Inserir -> Suplementos do Office (conforme segue a imagem abaixo). Inclua o seu manifesto e pronto! O Office add-in que acabou de criar já pode ser usado dentro do Excel! :)
+
+![alt text](https://i.imgsafe.org/43/4381820c9f.png)
+
+**melhorar essa parte da documentação**
+
 E pronto. A sua aplicação estará sendo executada! :smile:
 
 ## Desejam Propor Melhorias no Código? Façam Pull Request!!!  :triangular_flag_on_post:
