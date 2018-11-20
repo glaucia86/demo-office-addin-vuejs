@@ -4,15 +4,17 @@
  */
 
 import * as OfficeHelpers from '@microsoft/office-js-helpers';
-
-$(document).ready(() => {
-  $('#run').click(run);
-});
+import Vue from 'vue';
 
 // The initialize function must be run each time a new page is loaded
 Office.initialize = (reason) => {
-  $('#sideload-msg').hide();
-  $('#app-body').show();
+  var app = new Vue({
+    el: "#app",
+    data: {
+      welcome: "Seja Bem-vindo(a) Global Office Developer Bootcamp 2018 - Rio de Janeiro"
+    }
+  });
+  console.log(app);
 };
 
 async function run() {
