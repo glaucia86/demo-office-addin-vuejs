@@ -35,6 +35,7 @@
   "homepage": "https://github.com/glaucia86/demo-office-addin-vuejs/blob/master/README.md",
   "devDependencies": {
     "@types/office-js": "^0.0.37",
+    "@vue/eslint-config-prettier": "^4.0.1",
     "file-loader": "^1.1.11",
     "html-loader": "^0.5.5",
     "html-webpack-plugin": "^3.0.7",
