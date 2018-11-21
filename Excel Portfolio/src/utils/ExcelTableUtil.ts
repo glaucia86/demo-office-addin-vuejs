@@ -1,5 +1,5 @@
 /**
- * File: src/utils/excelTableUtil.ts
+ * File: src/utils/ExcelTableUtil.ts
  * Description: arquivo responsável por lidar como um 'helper' para trabalhar com as
  * tabelas do Microsoft Excel em conjunto com o office.js
  * Date: 11/21/2018

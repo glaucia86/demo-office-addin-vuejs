@@ -3,6 +3,8 @@
  * Description:
  * Date: 11/20/2018
  * Author: Glaucia Lemos
+ * My Alphavantage Key: L4OXENFQTVKZLZ2G (https://www.alphavantage.co/support/#api-key)
+ * More Free apis here: http://alpha.vantage.stack.network/
  */
 
 import Vue from "vue";
@@ -10,6 +12,9 @@ import Component from "vue-class-component";
 import waiting from "../WaitingComponent/waiting.vue";
 import headerComponent from "../HeaderComponent/headerComponent.vue";
 import stock from "../Stock/stock.vue";
+import { ExcelTableUtil } from "../../utils/ExcelTableUtil";
+
+const ALPHAVANTAGE_APIKEY: string = '{{ L4OXENFQTVKZLZ2G }}'
 
 @Component({
   data: function() {
@@ -17,7 +22,17 @@ import stock from "../Stock/stock.vue";
       symbols: [],
       waiting: false,
       error: "",
-      newSymbol: ""
+      newSymbol: "",
+      tableUtil: new ExcelTableUtil('Portfolio', 'A1:H1', [
+        'Symbol',
+        'Last Price',
+        'Timestamp',
+        'Quantity',
+        'Price Paid',
+        'Total Gain',
+        'Total Gain %',
+        'Value'
+      ])
     };
   },
   components: {
