@@ -1,4 +1,4 @@
-# Demo: Desenvolvendo um Office Add-in usando VueJs & Typescript:
+# Demo: Desenvolvendo um Office Add-in com VueJs & Typescript:
 
 <p align="center">
   <img src="https://i.imgsafe.org/2b/2bd8bd6f79.png"/>  
