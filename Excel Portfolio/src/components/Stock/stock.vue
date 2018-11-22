@@ -8,7 +8,6 @@
     </div>
 </template>
 
-<script lang="ts" src="./stock.ts" />
+<script lang="ts" src="./Stock.ts" />
 
-
-<style></style>
+<style />

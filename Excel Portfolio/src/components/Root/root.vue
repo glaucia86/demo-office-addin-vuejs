@@ -26,5 +26,6 @@
 </div>
 </template>
 
-<script lang="ts" src="./root.ts" />
-<style></style>
+<script lang="ts" src="./Root.ts" />
+
+<style/>

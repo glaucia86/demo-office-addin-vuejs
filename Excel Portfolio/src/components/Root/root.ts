@@ -9,9 +9,9 @@
 
 import Vue from "vue";
 import Component from "vue-class-component";
-import waiting from "../WaitingComponent/waiting.vue";
-import headerComponent from "../HeaderComponent/headerComponent.vue";
-import stock from "../Stock/stock.vue";
+import waiting from "../Waiting/Waiting.vue";
+import header from "../Header/Header.vue";
+import stock from "../Stock/Stock.vue";
 import { ExcelTableUtil } from "../../utils/ExcelTableUtil";
 
 const ALPHAVANTAGE_APIKEY: string = "{{ L4OXENFQTVKZLZ2G }}";
@@ -37,7 +37,7 @@ const ALPHAVANTAGE_APIKEY: string = "{{ L4OXENFQTVKZLZ2G }}";
   },
   components: {
     waiting,
-    headerComponent,
+    header,
     stock
   },
   methods: {
@@ -168,13 +168,16 @@ const ALPHAVANTAGE_APIKEY: string = "{{ L4OXENFQTVKZLZ2G }}";
 
     syncTable() {
       (<any>this).waiting = true;
-      (<any>this).tableUtil.getColumnData("Symbol").then(async(columnData: string[]) => {
-        (<any>this).symbols = columnData;
-        (<any>this).waiting = false;
-      }, (err) => {
-        (<any>this).error = err;
-        (<any>this).waiting = false;
-      });
+      (<any>this).tableUtil.getColumnData("Symbol").then(
+        async (columnData: string[]) => {
+          (<any>this).symbols = columnData;
+          (<any>this).waiting = false;
+        },
+        err => {
+          (<any>this).error = err;
+          (<any>this).waiting = false;
+        }
+      );
     }
   },
 

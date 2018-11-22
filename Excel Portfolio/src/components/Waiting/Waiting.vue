@@ -5,6 +5,6 @@
     </div>
 </template>
 
-<script lang="ts" src="./waiting.ts" />
+<script lang="ts" src="./Waiting.ts" />
 
-<style></style>
+<style />

@@ -20,6 +20,6 @@
     </div>
 </template>
 
-<script lang="ts" src="./headerComponent.ts" />
+<script lang="ts" src="./Header.ts" />
 
-<style></style>
+<style/>

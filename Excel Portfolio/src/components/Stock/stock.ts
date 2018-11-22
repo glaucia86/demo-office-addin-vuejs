@@ -5,26 +5,25 @@
  * Author: Glaucia Lemos
  */
 
-import Vue from 'vue';
-import Component from 'vue-class-component';
+import Vue from "vue";
+import Component from "vue-class-component";
 
 @Component({
-    props: {
-        symbol: String,
-        index: Number
+  props: {
+    symbol: String,
+    index: Number
+  },
+  methods: {
+    refreshSymbol(index: Number) {
+      this.$emit("refreshSymbol", index);
     },
-    methods: {
-        refreshSymbol(index:Number) {
-            this.$emit("refreshSymbol", index);
-        },
-        deleteSymbol(index:Number) {
-            this.$emit("deleteSymbol", index);
-        }
+    deleteSymbol(index: Number) {
+      this.$emit("deleteSymbol", index);
     }
+  }
 })
-
-export default class stock extends Vue {
-    name: 'stock';
-    symbol: String;
-    index: Number;
+export default class Stock extends Vue {
+  name: "Stock";
+  symbol: String;
+  index: Number;
 }
