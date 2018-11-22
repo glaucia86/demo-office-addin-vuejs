@@ -5,7 +5,7 @@
 
 import * as OfficeHelpers from '@microsoft/office-js-helpers';
 import Vue from 'vue';
-import root from './components/Root/root.vue';
+import root from './components/Root/Root.vue';
 
 // The initialize function must be run each time a new page is loaded
 Office.initialize = (reason) => {
