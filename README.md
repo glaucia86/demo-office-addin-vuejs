@@ -12,6 +12,7 @@ Repositório responsável pelos códigos desenvolvidos durante a palestra no eve
 - Node.js - **[DONWLOAD AQUI](https://nodejs.org/en/)**
 - VueJs - **[DOWNLOAD AQUI](https://vuejs.org/v2/guide/installation.html)**
 - Typescript - **[DOWNLOAD AQUI](https://www.typescriptlang.org/#download-links)**
+- Consumo da API - **[Alpha vantage Api](https://www.alphavantage.co/)** 
 
 ## Pré-Requisitos para a Realização da Demo: :fire:
 
