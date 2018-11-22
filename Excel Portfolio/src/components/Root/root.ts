@@ -3,7 +3,7 @@
  * Description:
  * Date: 11/20/2018
  * Author: Glaucia Lemos
- * My Alphavantage Key: L4OXENFQTVKZLZ2G (https://www.alphavantage.co/support/#api-key)
+ * My Alphavantage Key: L4OXENFQTVKZLZ2G (c/support/#api-key)
  * More Free apis here: http://alpha.vantage.stack.network/
  */
 
@@ -61,8 +61,33 @@ const ALPHAVANTAGE_APIKEY: string = '{{ L4OXENFQTVKZLZ2G }}'
       });
     },
 
+    // Método responsável por adicionar um novo 'symbol':
     addSymbol(symbol: string) {
-      console.log(symbol);
+      if((<KeyboardEvent>event).key == "Enter") {
+        this.waiting = true;
+        this.getQuote(symbol).then((res:any) => {
+          let data = [
+            res['1. symbol'], // symbol
+            res['2. price'], // Last Price
+            res['4. timestamp'], // Timestamp of quote
+            0,
+            0,
+            '=(B:B * D*D) - (E:E * D:D)', // Total Gain $
+            '=H:H / (E:E * D:D) * 100', // Total Gain %
+            '=B:B * D:D' // Value
+          ];
+          this.tableUtil.addRow(data).then(() => {
+            this.symbols.unshift(symbol);
+            this.waiting = false;
+            this.newSymbol = "";
+          }, (err) => {
+            this.error = err;
+          });
+        }, (err) => {
+          this.error = err;
+          this.waiting = false;
+        });
+      }
     },
 
     deleteSymbol(index: number) {
