@@ -145,4 +145,24 @@ export class ExcelTableUtil {
     });
   }
 
+  //Método responsável por atualizar uma celula específica na tabela:
+  updateCell = async(address: string, value: any) => {
+    return new Promise(async(resolve, reject) => {
+      this.ensureTable(true).then(async() => {
+        await Excel.run(async(context) => {
+          var sheet = context.workbook.worksheets.getActiveWorksheet();
+          var range = sheet.getRange(address);
+          range.values = [[value]];
+          return context.sync().then(async() => {
+            resolve();
+          });
+        }).catch((err) => {
+          reject(err);
+        });
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
 }

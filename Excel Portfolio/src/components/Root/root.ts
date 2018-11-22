@@ -64,8 +64,8 @@ const ALPHAVANTAGE_APIKEY: string = '{{ L4OXENFQTVKZLZ2G }}'
     // Método responsável por adicionar um novo 'symbol':
     addSymbol(symbol: string) {
       if((<KeyboardEvent>event).key == "Enter") {
-        this.waiting = true;
-        this.getQuote(symbol).then((res:any) => {
+        (<any>this).waiting = true;
+        (<any>this).getQuote(symbol).then((res:any) => {
           let data = [
             res['1. symbol'], // symbol
             res['2. price'], // Last Price
@@ -76,16 +76,16 @@ const ALPHAVANTAGE_APIKEY: string = '{{ L4OXENFQTVKZLZ2G }}'
             '=H:H / (E:E * D:D) * 100', // Total Gain %
             '=B:B * D:D' // Value
           ];
-          this.tableUtil.addRow(data).then(() => {
-            this.symbols.unshift(symbol);
-            this.waiting = false;
-            this.newSymbol = "";
+          (<any>this).tableUtil.addRow(data).then(() => {
+            (<any>this).symbols.unshift(symbol);
+            (<any>this).waiting = false;
+            (<any>this).newSymbol = "";
           }, (err) => {
-            this.error = err;
+            (<any>this).error = err;
           });
         }, (err) => {
-          this.error = err;
-          this.waiting = false;
+          (<any>this).error = err;
+          (<any>this).waiting = false;
         });
       }
     },
