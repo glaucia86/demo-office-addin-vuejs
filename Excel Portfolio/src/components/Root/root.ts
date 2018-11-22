@@ -91,7 +91,28 @@ const ALPHAVANTAGE_APIKEY: string = '{{ L4OXENFQTVKZLZ2G }}'
     },
 
     deleteSymbol(index: number) {
-      console.log(index);
+      // Aqui irá excluir da table do Excel usando o index:
+      let symbol = (<any>this).symbols[index];
+      (<any>this).waiting = true;
+      (<any>this).tableUtil.getColumnData("Symbol").then(async(columnData: string[]) => {
+        // O 'if' é para ter certeza de que o 'symbol' foi de fato encontrado:
+        if(columnData.indexOf(symbol) != -1) {
+          (<any>this).tableUtil.deleteRow(columnData.indexOf(symbol)).then(async() => {
+            (<any>this).symbols.splice(index, 1);
+            (<any>this).waiting = false;
+          }, (err) => {
+            (<any>this).error = err;
+            (<any>this).waiting = false;
+          });
+        }
+        else {
+          (<any>this).symbols.splice(index, 1);
+          (<any>this).waiting = false;
+        }
+      }, (err) => {
+        (<any>this).error = err;
+        (<any>this).waiting = false;
+      });
     },
 
     refreshSymbol(index: number) {
