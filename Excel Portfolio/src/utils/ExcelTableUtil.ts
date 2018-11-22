@@ -96,5 +96,53 @@ export class ExcelTableUtil {
         }
       );
     });
-  };
+  }
+
+  // Método responsável por retornar um dado específico de uma coluna:
+  getColumnData = async(column: string) => {
+    return new Promise(async(resolve, reject) => {
+      this.ensureTable(false).then(async(tableRef: Excel.Table) => {
+        if(tableRef == null)
+          resolve([])
+        else {
+          await Excel.run(async(context) => {
+            // Aqui iremos retornar o intervalo dos valores por meio dos nomes da coluna:
+            var colRange = tableRef.columns.getItem(column).getDataBodyRange().load("values");
+            // 
+            return context.sync().then(async() => {
+              let data: string[] = [];
+              for (var i = 0; i < colRange.values.length; i++) {
+                data.push(colRange.values[i].toString());
+              }
+              resolve(data);
+            });
+          }).catch((err) => {
+            reject(err);
+          });
+        }  
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
+  // Método responsável por excluir um coluna usando o index da linha:
+  deleteRow = async(index: number) => {
+    return new Promise(async(resolve, reject) => {
+      this.ensureTable(true).then(async(tableRef: Excel.Table) => {
+        await Excel.run(async(context) => {
+          var range = tableRef.rows.getItemAt(index).getRange();
+          range.delete(Excel.DeleteShiftDirection.up);
+          return context.sync().then(async() => {
+            resolve();
+          });
+        }).catch((err) => {
+          reject(err);
+        });
+      }, (err) => {
+        reject(err);
+      });
+    });
+  }
+
 }
