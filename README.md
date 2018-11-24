@@ -20,10 +20,11 @@ Se faz necessário realizar os seguintes passos abaixo para que vocês possam da
 
 1) Possuir conhecimentos prévios em:
 
-* Node.js;
-* VueJs;
-* Conceitos de Async & Await;
-* Typescript
+* **Node.js;**
+* **VueJs;**
+* **Conceitos de Async & Await;**
+* **Conhecimentos em ES5;**
+* **Typescript;**
 
 2) Possuir conta OneDrive - **[Criar Conta Aqui](https://onedrive.live.com/)**
 
