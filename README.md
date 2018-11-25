@@ -60,7 +60,6 @@ Após isso, abre uma aplicação Excel (pode ser a versão online) e clique na o
 
 ![alt text](https://i.imgsafe.org/43/4381820c9f.png)
 
-**melhorar essa parte da documentação**
 
 **[MAIS INFOS AQUI](https://docs.microsoft.com/en-us/office/dev/add-ins/testing/sideload-office-add-ins-for-testing#sideload-an-office-add-in-on-office-online)**
 
@@ -72,4 +71,3 @@ Caso queiram que eu implemente algo no código, abram uma **[Issue](https://gith
 
 Não esqueçam de dar uma star no repositório e claro: Apreciem sem moderação!! :heart: :heart: :heart:
 
-**Documentação em Desenvolvimento**
