@@ -8,7 +8,7 @@ Repositório responsável pelos códigos desenvolvidos durante a palestra no eve
 
 ## Recursos Utilizados no Desenvolvimento da Demo: :rocket:
 
-- Visual Studio Code - **[DOWNLOAD AQUI](https://code.visualstudio.com/download)**
+- Visual Studio Code - **[DOWNLOAD AQUI](https://code.visualstudio.com/download?WT.mc_id=javascript-0000-gllemos)**
 - Node.js - **[DONWLOAD AQUI](https://nodejs.org/en/)**
 - VueJs - **[DOWNLOAD AQUI](https://vuejs.org/v2/guide/installation.html)**
 - Typescript - **[DOWNLOAD AQUI](https://www.typescriptlang.org/#download-links)**
@@ -61,7 +61,7 @@ Após isso, abre uma aplicação Excel (pode ser a versão online) e clique na o
 ![alt text](https://i.imgsafe.org/43/4381820c9f.png)
 
 
-**[MAIS INFOS AQUI](https://docs.microsoft.com/en-us/office/dev/add-ins/testing/sideload-office-add-ins-for-testing#sideload-an-office-add-in-on-office-online)**
+**[MAIS INFOS AQUI](https://docs.microsoft.com/office/dev/add-ins/testing/sideload-office-add-ins-for-testing?WT.mc_id=javascript-0000-gllemos#sideload-an-office-add-in-on-office-online)**
 
 E pronto. A sua aplicação estará sendo executada! :smile:
 
